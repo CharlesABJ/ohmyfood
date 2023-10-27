@@ -1,0 +1,33 @@
+footer {
+    background-color: #353535;
+    color: #fff;
+    padding: 22px;
+}
+
+footer h2 {
+    font-size: 18px;
+    font-family: 'Shrikhand', sans-serif;
+    margin-bottom: 15px;
+}
+
+footer nav ul li {
+    line-height: 1.8;
+}
+
+footer nav ul li.bold a {
+    font-weight: 500;
+}
+
+footer nav ul li i {
+    margin-right: 10px;
+}
+
+footer nav ul li i.partner {
+    font-size: 14px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
