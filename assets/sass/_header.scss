@@ -1,0 +1,18 @@
+header {
+  padding: 15px 15px 5px;
+  box-shadow: 0 3px 10px #0000004a;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  .go-back-to-home {
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--bg-footer-color);
+    }
+  }
+}

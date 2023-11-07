@@ -1,0 +1,55 @@
+footer {
+  background-color: var(--bg-footer-color);
+  color: #fff;
+  padding: 22px;
+}
+
+footer h2 {
+  font-size: 18px;
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 15px;
+}
+
+footer nav ul li {
+  line-height: 1.8;
+}
+
+footer nav ul li.bold a {
+  font-weight: 500;
+}
+
+footer nav ul li i {
+  margin-right: 10px;
+}
+
+footer nav ul li i.partner {
+  font-size: 14px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s color ease-in-out;
+  &:hover {
+    color: #cbcbcb;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    nav ul {
+      display: flex;
+      width: 100%;
+      margin-right: 7vw;
+      li {
+        margin-right: 20px;
+        &:nth-of-type(3) {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
