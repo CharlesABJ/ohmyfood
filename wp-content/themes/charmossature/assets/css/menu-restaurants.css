@@ -49,6 +49,39 @@ i {
   cursor: pointer;
 }
 
+.fav {
+  position: relative;
+  display: inline;
+  height: 28px;
+  width: 28px;
+}
+.fav i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.fav i.fa-regular:hover {
+  opacity: 0;
+  transition: opacity 93s ease-in-out;
+}
+.fav i.fa-solid {
+  font-weight: 900 !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fav i.fa-solid:hover {
+  background-image: var(--bg-linear);
+}
+
+i.fa-regular.fa-heart:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--bg-linear);
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -86,6 +119,7 @@ header .go-back-to-home:hover {
 
 .menu-cover {
   height: 275px;
+  height: 430px;
 }
 .menu-cover img {
   width: 100%;
@@ -97,25 +131,29 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 90px 90px 0 0;
   background-color: var(--bg-color);
   padding: 12px;
   margin: 0 auto;
 }
 main .menu-title {
+  border-radius: 75px 75px 0 0;
+  top: -90px;
+  background-color: var(--bg-color);
+  position: absolute;
   display: flex;
-  padding: 37px 12px 17px;
+  padding: 37px 35px 17px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 main .menu-title h2 {
   font-size: 28px;
+  font-weight: 500;
   font-family: "Shrikhand", sans-serif;
 }
 main .menu-title i {
   font-size: 28px;
-  transition: transform 0.3s;
+  font-weight: 100;
 }
 main h3 {
   margin: 0 auto;
@@ -144,27 +182,65 @@ main ul {
   padding-top: 17px;
   flex-direction: column;
   width: 100%;
-  max-width: 634px;
+  width: 634px;
 }
 main ul li {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 15px;
+}
+main ul li .contenu {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   background-color: white;
-  border-radius: 15px;
   width: 100%;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  transition: width 0.3s ease-in-out;
 }
-main ul li:hover {
+main ul li .contenu:first-child {
+  animation-delay: 0;
+}
+main ul li .contenu:nth-child(2) {
+  animation-delay: 1s;
+}
+main ul li .contenu:nth-child(3) {
+  animation-delay: 2s;
+}
+main ul li .contenu:hover {
   transform: scale(1.01);
   box-shadow: 0 0 20px rgba(193, 183, 183, 0.4196078431);
 }
-main ul li div {
+main ul li .contenu div {
   padding: 15px;
 }
-main ul li .menu-price {
+main ul li .contenu .menu-price {
   font-weight: bold;
+}
+main ul li .checked {
+  width: 59px;
+  height: 69px;
+  background-color: var(--bg-new-menu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -60px;
+  transition: transform 0.3s ease-in-out;
+  color: #fff;
+  font-size: 20px;
+}
+main ul li:hover .contenu {
+  width: calc(100% - 60px);
+}
+main ul li:hover .checked {
+  transform: translateX(-60px);
 }
 main .button-order {
   margin: 40px 0 28px;
@@ -173,10 +249,25 @@ main .button-order {
   color: #fff;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu-cover {
+    height: 383px;
+    height: 530px;
+  }
+  main .menu-title {
+    justify-content: center;
+  }
+  main .menu-title h2 {
+    margin-right: 10px;
+  }
+}
 @keyframes fadeIn {
   0% {
-    transform: translateY(10px);
+    transform: translateY(30px);
     opacity: 0;
+  }
+  75% {
+    opacity: 1;
   }
   100% {
     transform: translateY(0);

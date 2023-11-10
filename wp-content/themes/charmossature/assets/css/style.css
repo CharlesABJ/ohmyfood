@@ -49,6 +49,39 @@ i {
   cursor: pointer;
 }
 
+.fav {
+  position: relative;
+  display: inline;
+  height: 28px;
+  width: 28px;
+}
+.fav i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.fav i.fa-regular:hover {
+  opacity: 0;
+  transition: opacity 93s ease-in-out;
+}
+.fav i.fa-solid {
+  font-weight: 900 !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fav i.fa-solid:hover {
+  background-image: var(--bg-linear);
+}
+
+i.fa-regular.fa-heart:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--bg-linear);
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -323,10 +356,6 @@ main {
   position: absolute;
   bottom: 30px;
   right: 20px;
-  transition: 0.3s ease-in-out;
-}
-#restaurants .restaurants-zone article .like:hover {
-  background-color: red;
 }
 
 @media screen and (min-width: 1024px) {

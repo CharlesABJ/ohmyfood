@@ -37,10 +37,6 @@ a {
   font-size: 16px;
 }
 
-main {
-  background-color: var(--bg-color);
-}
-
 .location {
   height: 50px;
   text-align: center;
@@ -48,7 +44,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3px;
   font-size: 16px;
   font-weight: 500;
   color: var(--bg-footer-color);
@@ -63,6 +58,9 @@ main {
   border: none;
   background-color: var(--bg-color2);
   outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bg-footer-color);
 }
 
 .location input::placeholder {
@@ -78,6 +76,7 @@ main {
   align-items: center;
   text-align: center;
   padding: 30px 45px 50px;
+  background-color: var(--bg-color);
 }
 
 #explore-restaurants h2 {
@@ -112,6 +111,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin: 0 2px 0 5px;
 }
 
 #functioning .functioning-widgets .widget {
@@ -123,14 +123,14 @@ main {
   align-items: center;
   box-shadow: 0 3px 10px 4px #9e9e9e4a;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 #functioning .functioning-widgets .widget:hover {
+  background: #f5edff;
   transform: scale(1.01);
   box-shadow: 0 0 20px #8f87876b;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #functioning .functioning-widgets .widget span {
@@ -154,13 +154,15 @@ main {
 
 #restaurants {
   padding: 30px 15px 60px;
+  background-color: var(--bg-color);
 }
 
 #restaurants article {
   border-radius: 15px;
   background-color: #fff;
   height: 251px;
-  width: 340px;
+  width: 335px;
+  box-shadow: 0 5px 8px #0000001a;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   .new-menu::before {
@@ -198,7 +200,7 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -241,20 +243,34 @@ main {
   right: 20px;
 }
 
-@media screen and (min-width: 1024px) {
-  #functioning h2 {
+@media screen and (min-width: 791px) {
+  #restaurants div .restaurants-zone {
+    gap: 40px;
+    article {
+      width: 80%;
+      height: 300px;
+    }
   }
+}
+
+@media screen and (min-width: 1024px) {
   #functioning .functioning-widgets {
     flex-direction: row;
     justify-content: center;
   }
 
-  #restaurants .restaurants-zone {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
+  #restaurants .container {
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  #restaurants div .restaurants-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     article {
       width: 490px;
+      height: 251px;
     }
   }
 }

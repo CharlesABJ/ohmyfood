@@ -100,7 +100,7 @@ a.button:hover {
 
 header {
   padding: 15px 15px 5px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2901960784);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1803921569);
   display: flex;
   justify-content: center;
   position: relative;
@@ -119,7 +119,6 @@ header .go-back-to-home:hover {
 
 .menu-cover {
   height: 275px;
-  height: 430px;
 }
 .menu-cover img {
   width: 100%;
@@ -136,8 +135,8 @@ main {
   margin: 0 auto;
 }
 main .menu-title {
-  border-radius: 75px 75px 0 0;
-  top: -90px;
+  border-radius: 50px 50px 0 0;
+  top: -60px;
   background-color: var(--bg-color);
   position: absolute;
   display: flex;
@@ -182,7 +181,7 @@ main ul {
   padding-top: 17px;
   flex-direction: column;
   width: 100%;
-  width: 634px;
+  max-width: 634px;
 }
 main ul li {
   position: relative;
@@ -312,7 +311,7 @@ footer nav ul li a:hover {
   color: #cbcbcb;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 791px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
