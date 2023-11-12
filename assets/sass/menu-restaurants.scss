@@ -28,7 +28,7 @@ main {
     justify-content: space-between;
     width: 100%;
     h2 {
-      font-size: 28px;
+      font-size: 27px;
       font-weight: 500;
       font-family: "Shrikhand", sans-serif;
     }
@@ -68,8 +68,7 @@ main {
     li {
       position: relative;
       overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+
       border-radius: 15px;
       .contenu {
         display: flex;
@@ -90,13 +89,18 @@ main {
         &:nth-child(3) {
           animation-delay: 2s;
         }
-
-        &:hover {
-          transform: scale(1.01);
-          box-shadow: 0 0 20px #c1b7b76b;
-        }
         div {
           padding: 15px;
+        }
+        .menu-content {
+          overflow: hidden;
+          white-space: nowrap;
+
+          h4,
+          p {
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
         }
 
         .menu-price {
@@ -125,6 +129,10 @@ main {
         }
         .checked {
           transform: translateX(-60px);
+          i {
+            transform: rotate(360deg);
+            transition: transform 0.8s;
+          }
         }
       }
     }
@@ -138,12 +146,17 @@ main {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .menu-cover {
-    height: 383px;
-    height: 530px;
+@media screen and (max-width: 373px) {
+  main {
+    .menu-title {
+      h2 {
+        font-size: 23px;
+      }
+    }
   }
+}
 
+@media screen and (min-width: 791px) {
   main {
     .menu-title {
       justify-content: center;
@@ -151,6 +164,13 @@ main {
         margin-right: 10px;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-cover {
+    height: 383px;
+    height: 530px;
   }
 }
 

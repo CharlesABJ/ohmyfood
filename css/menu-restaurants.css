@@ -99,7 +99,7 @@ a.button:hover {
 }
 
 header {
-  padding: 15px 15px 5px;
+  padding: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1803921569);
   display: flex;
   justify-content: center;
@@ -146,7 +146,7 @@ main .menu-title {
   width: 100%;
 }
 main .menu-title h2 {
-  font-size: 28px;
+  font-size: 27px;
   font-weight: 500;
   font-family: "Shrikhand", sans-serif;
 }
@@ -186,8 +186,6 @@ main ul {
 main ul li {
   position: relative;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   border-radius: 15px;
 }
 main ul li .contenu {
@@ -211,12 +209,17 @@ main ul li .contenu:nth-child(2) {
 main ul li .contenu:nth-child(3) {
   animation-delay: 2s;
 }
-main ul li .contenu:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 20px rgba(193, 183, 183, 0.4196078431);
-}
 main ul li .contenu div {
   padding: 15px;
+}
+main ul li .contenu .menu-content {
+  overflow: hidden;
+  white-space: nowrap;
+}
+main ul li .contenu .menu-content h4,
+main ul li .contenu .menu-content p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main ul li .contenu .menu-price {
   font-weight: bold;
@@ -241,6 +244,10 @@ main ul li:hover .contenu {
 main ul li:hover .checked {
   transform: translateX(-60px);
 }
+main ul li:hover .checked i {
+  transform: rotate(360deg);
+  transition: transform 0.8s;
+}
 main .button-order {
   margin: 40px 0 28px;
   padding: 15px 60px;
@@ -248,16 +255,23 @@ main .button-order {
   color: #fff;
 }
 
-@media screen and (min-width: 1024px) {
-  .menu-cover {
-    height: 383px;
-    height: 530px;
+@media screen and (max-width: 373px) {
+  main .menu-title h2 {
+    font-size: 23px;
   }
+}
+@media screen and (min-width: 791px) {
   main .menu-title {
     justify-content: center;
   }
   main .menu-title h2 {
     margin-right: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-cover {
+    height: 383px;
+    height: 530px;
   }
 }
 @keyframes fadeIn {

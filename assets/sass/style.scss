@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./header";
+@import "./loader";
 
 ::after,
 * {
@@ -118,6 +119,7 @@ a {
   background-color: var(--bg-color);
   border-radius: 20px;
   width: 322.49px;
+  margin-left: 10px;
   height: 72.38px;
   display: flex;
   align-items: center;
