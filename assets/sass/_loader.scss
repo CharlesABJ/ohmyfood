@@ -1,78 +1,56 @@
+@import "./reset";
 .loader {
   position: fixed;
-  z-index: 9;
   background: var(--bg-color);
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  animation: loading-container 3.25s ease-in-out forwards;
-  .loading-text {
-    margin: auto 0;
-    font-size: 9vw;
-    color: var(--bg-color);
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    span {
-      position: relative;
-      display: inline-block;
-      margin: 10px;
-      &::after {
-        position: absolute;
-        left: 0;
-        content: attr(data-letter);
-        display: inline-block;
-        color: #ff79da;
-        text-shadow: #ff79da 0 0 2px, #9356dc 0 0 10px;
-        opacity: 0;
-        animation: loading 3.25s linear infinite;
-      }
+  z-index: 2;
+  animation: overlay 2s forwards;
+
+  .dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 15px;
+    background: var(--bg-linear);
+    animation: loader 0.3s 7 alternate forwards;
+
+    &.dot2 {
+      animation-delay: 0.05s;
+    }
+    &.dot3 {
+      animation-delay: 0.1s;
     }
   }
 }
-@keyframes loading {
-  0% {
-    opacity: 0;
-  }
 
-  30% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
+@media screen and (min-width: 791px) {
+  .loader {
+    .dot {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
-@keyframes loading-container {
-  0% {
-    opacity: 0;
-    transform: translateY(3 40px);
-  }
 
-  30% {
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes overlay {
+  0% {
     opacity: 1;
   }
-
+  80% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
     display: none;
   }
-}
-
-.loading-text span:nth-child(2)::after {
-  animation-delay: 0.1s;
-}
-
-.loading-text span:nth-child(3)::after {
-  animation-delay: 0.2s;
-}
-
-.loading-text span:nth-child(4)::after {
-  animation-delay: 0.3s;
-}
-
-.loading-text span:nth-child(5)::after {
-  animation-delay: 0.4s;
 }
