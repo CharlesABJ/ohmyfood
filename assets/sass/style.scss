@@ -241,8 +241,22 @@ a {
 
 #restaurants .restaurants-zone article .like {
   position: absolute;
-  bottom: 30px;
-  right: 20px;
+  bottom: 40px;
+  right: 30px;
+  i {
+    position: absolute;
+    &.fa-solid {
+      opacity: 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: var(--bg-linear);
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 791px) {

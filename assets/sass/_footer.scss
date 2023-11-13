@@ -40,14 +40,21 @@ footer nav ul li a {
   footer {
     display: flex;
     flex-direction: row-reverse;
-    nav ul {
-      display: flex;
+    justify-content: space-between;
+    nav {
       width: 100%;
-      margin-right: 7vw;
-      li {
-        margin-right: 20px;
-        &:nth-of-type(3) {
-          margin-left: 30px;
+      margin-right: 5vw;
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-right: 7vw;
+        li {
+          margin-right: 20px;
+          width: max-content;
+          &:nth-of-type(3) {
+            margin-left: 30px;
+          }
         }
       }
     }

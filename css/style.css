@@ -49,39 +49,6 @@ i {
   cursor: pointer;
 }
 
-.fav {
-  position: relative;
-  display: inline;
-  height: 28px;
-  width: 28px;
-}
-.fav i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
-.fav i.fa-regular:hover {
-  opacity: 0;
-  transition: opacity 93s ease-in-out;
-}
-.fav i.fa-solid {
-  font-weight: 900 !important;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.fav i.fa-solid:hover {
-  background-image: var(--bg-linear);
-}
-
-i.fa-regular.fa-heart:hover {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: var(--bg-linear);
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -168,39 +135,6 @@ i {
   cursor: pointer;
 }
 
-.fav {
-  position: relative;
-  display: inline;
-  height: 28px;
-  width: 28px;
-}
-.fav i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 1;
-}
-.fav i.fa-regular:hover {
-  opacity: 0;
-  transition: opacity 93s ease-in-out;
-}
-.fav i.fa-solid {
-  font-weight: 900 !important;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.fav i.fa-solid:hover {
-  background-image: var(--bg-linear);
-}
-
-i.fa-regular.fa-heart:hover {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: var(--bg-linear);
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -225,7 +159,7 @@ a.button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
   animation: overlay 2s forwards;
 }
 .loader .dot {
@@ -506,8 +440,22 @@ a {
 
 #restaurants .restaurants-zone article .like {
   position: absolute;
-  bottom: 30px;
-  right: 20px;
+  bottom: 40px;
+  right: 30px;
+}
+#restaurants .restaurants-zone article .like i {
+  position: absolute;
+}
+#restaurants .restaurants-zone article .like i.fa-solid {
+  opacity: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: var(--bg-linear);
+  transition: opacity 0.3s;
+}
+#restaurants .restaurants-zone article .like i.fa-solid:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 791px) {
@@ -580,14 +528,21 @@ footer nav ul li a:hover {
   footer {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  footer nav {
+    width: 100%;
+    margin-right: 5vw;
   }
   footer nav ul {
     display: flex;
+    justify-content: flex-end;
     width: 100%;
     margin-right: 7vw;
   }
   footer nav ul li {
     margin-right: 20px;
+    width: max-content;
   }
   footer nav ul li:nth-of-type(3) {
     margin-left: 30px;
