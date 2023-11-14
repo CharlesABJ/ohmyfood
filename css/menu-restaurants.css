@@ -32,7 +32,6 @@ img {
 
 body {
   margin: 0 auto;
-  max-width: 1440px;
   min-width: 320px;
 }
 
@@ -150,7 +149,7 @@ main .menu-title .fav:hover i {
   transition: 2s;
 }
 main .menu-title .fav:hover i::after {
-  animation: likeAnime 3s forwards;
+  animation: likeAnime 2s forwards;
   opacity: 1;
 }
 

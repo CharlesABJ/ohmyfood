@@ -69,7 +69,7 @@ main {
         transition: 2s;
 
         &::after {
-          animation: likeAnime 3s forwards;
+          animation: likeAnime 2s forwards;
           opacity: 1;
         }
       }
