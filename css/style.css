@@ -402,11 +402,12 @@ a.button:hover {
 
 #restaurants .restaurants-zone article .like {
   position: absolute;
-  bottom: 40px;
-  right: 30px;
+  bottom: 55px;
+  right: 40px;
 }
 #restaurants .restaurants-zone article .like i {
   position: absolute;
+  font-size: 22px;
 }
 #restaurants .restaurants-zone article .like i.fa-solid {
   opacity: 0;

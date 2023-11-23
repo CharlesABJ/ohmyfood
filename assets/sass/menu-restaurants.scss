@@ -34,13 +34,15 @@ main {
     }
 
     .fav {
+      display: flex;
+      align-items: center;
       cursor: pointer;
       height: 28px;
       width: 28px;
+      margin-left: 10px;
       i {
-        font-size: 28px;
+        font-size: 22px;
         position: absolute;
-        right: 30px;
 
         &.fa-regular {
           z-index: 4;

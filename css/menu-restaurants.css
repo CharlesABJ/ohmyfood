@@ -117,14 +117,16 @@ main .menu-title h2 {
   font-family: "Shrikhand", sans-serif;
 }
 main .menu-title .fav {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   height: 28px;
   width: 28px;
+  margin-left: 10px;
 }
 main .menu-title .fav i {
-  font-size: 28px;
+  font-size: 22px;
   position: absolute;
-  right: 30px;
 }
 main .menu-title .fav i.fa-regular {
   z-index: 4;

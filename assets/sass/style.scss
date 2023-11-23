@@ -205,10 +205,11 @@
 
 #restaurants .restaurants-zone article .like {
   position: absolute;
-  bottom: 40px;
-  right: 30px;
+  bottom: 55px;
+  right: 40px;
   i {
     position: absolute;
+    font-size: 22px;
     &.fa-solid {
       opacity: 0;
       background-clip: text;
