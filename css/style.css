@@ -200,7 +200,6 @@ a.button:hover {
 }
 .location {
   height: 50px;
-  text-align: center;
   background-color: var(--bg-color2);
   display: flex;
   align-items: center;
@@ -211,11 +210,12 @@ a.button:hover {
 }
 
 .location label {
-  margin-right: 15px;
+  margin-left: 35px;
   cursor: pointer;
 }
 
 .location input {
+  padding-left: 20px;
   border: none;
   background-color: var(--bg-color2);
   outline: none;
